@@ -1,0 +1,54 @@
+﻿<Window x:Class="DtFkGenerator.UI.WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DtFkGenerator.UI.WPF.TabItemContents"
+        mc:Ignorable="d"
+        Title="DtFkGenerator" Width="525" KeyDown="Window_KeyDown" SizeToContent="Height">
+    <StackPanel Margin="5 10 5 15">
+        <TabControl MinHeight="100" Name="tabControlMain" SelectionChanged="tabControlMain_SelectionChanged"
+                    Background="#FFE5E5E5">
+            <TabItem Header="Guid (1)" Name="tabItemGuid">
+                <local:Guid />
+            </TabItem>
+            <TabItem Header="Nome (2)" Name="tabItemNome">
+                <local:Nome />
+            </TabItem>
+            <TabItem Header="Data (3)" Name="tabItemData">
+                <local:Data />
+            </TabItem>
+            <TabItem Header="CPF (4)" Name="tabItemCpf">
+                <local:Cpf />
+            </TabItem>
+            <TabItem Header="RUT (5)" Name="tabItemRut">
+                <local:Rut />
+            </TabItem>
+            <TabItem Header="Sobre (6)" Name="tabItemSobre">
+                <TextBlock TextWrapping="Wrap" Margin="10">
+                    Este software foi feito pelo desenvolvedor Vinícius Bastos, e está disponível no GitHub através do link 
+                    <Hyperlink NavigateUri="https://github.com/vinibas/DtFkGenerator" RequestNavigate="Hyperlink_RequestNavigate">
+                        https://github.com/vinibas/DtFkGenerator
+                    </Hyperlink>
+                    . Este projeto foi criado como um projeto de demonstração, porém para uso prático, auxiliando no desenvolvimento
+                    e teste de outros softwares.
+                    Quaisquer problemas, bugs ou sugestões de melhorias ou correções, entre em contato através do GitHub.
+                    Bom Proveito!
+                </TextBlock>
+            </TabItem>
+        </TabControl>
+
+        <UniformGrid Rows="1" Columns="4">
+            <UniformGrid.Resources>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Control.Margin" Value="0, 5, 15, 0"/>
+                    <Setter Property="Control.Padding" Value="15, 5"/>
+                </Style>
+            </UniformGrid.Resources>
+            <Button Content="_Copiar (C)" Margin="15, 5, 15, 0" Name="btnCopiar" Click="btnCopiar_Click"/>
+            <Button Content="Gerar _novo (N)" Name="btnGerarNovo" Click="btnGerarNovo_Click"/>
+            <Button Content="Gerar _lista (L)" Name="btnGerarLista" Click="btnGerarLista_Click"/>
+            <Button Content="_Fechar (F)" Name="btnFechar" Click="btnFechar_Click"/>
+        </UniformGrid>
+    </StackPanel>
+</Window>

@@ -1,0 +1,19 @@
+﻿#NOMES_MASCULINOS
+João
+José
+Mário
+Maurício
+
+#NOMES_FEMININOS
+Maria
+Márcia
+Isaura
+Ivone
+Josefina
+
+#SOBRENOMES
+da Silva
+Álvares
+Figueira
+Oliveira
+das Dores
